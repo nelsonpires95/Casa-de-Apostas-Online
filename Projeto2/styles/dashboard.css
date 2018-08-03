@@ -1,0 +1,302 @@
+/*! --- Não Apagar ---------
+ * Aluno:
+ * Seminário - Modulo IV
+ * Ficheiro CSS do portal estudante ISMT Boostrap
+ * Todas as classes deverão estar comentadas e justificadas
+ */
+
+
+ /* Remove the navbar's default margin-bottom and rounded borders */
+
+/*grafico*/
+li a
+{
+  color: darkgreen;
+}
+
+.well h3, .well h4, .well h2, .well h5, .well h6, .well th
+{
+  color: darkgreen;
+}
+img {
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+
+ li a
+ {
+   color: darkgreen;
+ }
+
+ .well h3, .well h4, .well h2, .well h5, .well h6, .well th, .row h2, .row h3, .row h4
+ {
+   color: darkgreen;
+ }
+ img {
+     max-height: 100%;
+     max-width: 100%;
+     margin: 0 auto;
+ }
+ .navbar {
+   margin-bottom: 0;
+   border-radius: 0;
+ }
+
+ /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+ .row.content
+  {
+    height:80vh;
+  }
+
+
+ /* Set gray background color and 100% height */
+ .sidenav {
+   padding-top: 20px;
+   background-color: #f1f1f1;
+   height: 100%;
+ }
+
+ /* Set black background color, white text and some padding */
+ footer {
+   background-color: #555;
+   color: white;
+   padding: 15px;
+ }
+
+ /* On small screens, set height to 'auto' for sidenav and grid */
+ @media screen and (max-width: 767px) {
+   .sidenav {
+     height: auto;
+     padding: 15px;
+   }
+   .row.content {height:auto;}
+ }
+
+body {
+  /*padding-top: 3.5rem;*/
+}
+
+/*
+ * Typography
+ */
+
+h1 {
+  padding-bottom: 9px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  position: fixed;
+  top: 10px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 20px 0;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  border-right: 1px solid #eee;
+}
+
+.sidebar .nav {
+  margin-bottom: 20px;
+}
+
+/*menu lateral posição 1*/
+.sidebar .nav-item {
+  width: 100%;
+}
+
+.sidebar .nav-item + .nav-item {
+  margin-left: 0;
+}
+
+.sidebar .nav-link {
+  border-radius: 0;
+}
+
+/*
+ * Dashboard
+ */
+
+/* Placeholders */
+.placeholders {
+  padding-bottom: 3rem;
+}
+
+.placeholder img {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+
+
+body{
+  background-color: #f0f0f0;
+}
+.progress{
+  max-width:1000px;
+  margin: 40px auto;
+}
+
+
+/* STYLES FOR PROGRESSBARS */
+
+.progress-radial, .progress-radial * {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+/* -------------------------------------
+ * Bar container
+ * ------------------------------------- */
+.progress-radial {
+  float: left;
+  margin-right: 4%;
+  position: relative;
+  width: 20%;
+  border-radius: 50%;
+}
+.progress-radial:first-child {
+  margin-left: 4%;
+}
+/* -------------------------------------
+ * Optional centered circle w/text
+ * ------------------------------------- */
+.progress-radial .overlay {
+  position: absolute;
+  width: 80%;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  font-size: 14px;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.progress-radial .overlay p{
+    position: absolute;
+    line-height: 40px;
+    text-align: center;
+    width: 100%;
+    top:50%;
+    margin-top: -20px;
+}
+
+/* -------------------------------------
+ * Mixin for progress-% class
+ * ------------------------------------- */
+.progress-0 {
+  background-image: -webkit-linear-gradient(0deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(0deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(90deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(90deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-5 {
+  background-image: -webkit-linear-gradient(0deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(342deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(90deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(108deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-10 {
+  background-image: -webkit-linear-gradient(0deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(324deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(90deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(126deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-15 {
+  background-image: -webkit-linear-gradient(0deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(306deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(90deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(144deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-20 {
+  background-image: -webkit-linear-gradient(0deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(288deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(90deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(162deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-25 {
+  background-image: -webkit-linear-gradient(0deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(270deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(90deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(180deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-30 {
+  background-image: -webkit-linear-gradient(0deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(252deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(90deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(198deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-35 {
+  background-image: -webkit-linear-gradient(0deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(234deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(90deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(216deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-40 {
+  background-image: -webkit-linear-gradient(0deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(216deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(90deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(234deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-45 {
+  background-image: -webkit-linear-gradient(0deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(198deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(90deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(252deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-50 {
+  background-image: -webkit-linear-gradient(180deg, #38b16b 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(-90deg, #38b16b 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-55 {
+  background-image: -webkit-linear-gradient(162deg, #38b16b 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(-72deg, #38b16b 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-60 {
+  background-image: -webkit-linear-gradient(144deg, #38b16b 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(-54deg, #38b16b 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-65 {
+  background-image: -webkit-linear-gradient(126deg, #38b16b 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(-36deg, #38b16b 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-70 {
+  background-image: -webkit-linear-gradient(108deg, #38b16b 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(-18deg, #38b16b 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-75 {
+  background-image: -webkit-linear-gradient(90deg, #38b16b 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(0deg, #38b16b 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-80 {
+  background-image: -webkit-linear-gradient(72deg, #38b16b 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(18deg, #38b16b 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-85 {
+  background-image: -webkit-linear-gradient(54deg, #38b16b 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(36deg, #38b16b 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-90 {
+  background-image: -webkit-linear-gradient(36deg, #38b16b 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(54deg, #38b16b 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-95 {
+  background-image: -webkit-linear-gradient(18deg, #38b16b 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(72deg, #38b16b 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-100 {
+  background-image: -webkit-linear-gradient(0deg, #38b16b 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(90deg, #38b16b 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #38b16b 50%, #f0f0f0 50%, #f0f0f0);
+}

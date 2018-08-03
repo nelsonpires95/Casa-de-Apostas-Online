@@ -1,0 +1,227 @@
+<!--<META HTTP-EQUIV="refresh" CONTENT="60"> -->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Casa de Apostas</title>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet"  href="styles/style.css">
+<script language="JavaScript" type="text/javascript" src="js/script.js"></script>
+<style>
+
+    body {
+      margin:0; padding:0;
+     }
+
+    table tr:not(:first-child){
+      cursor: pointer;transition: all .25s ease-in-out;
+    }
+
+    table tr:not(:first-child):hover{
+      background-color: white;
+    }
+
+    table{
+      float:left;
+    }
+
+    form{
+      float: left;
+      width:100%;
+    }
+
+    .wrap {
+      width:980px;
+      margin:0 auto;
+    }
+
+    .header {
+      height:250px;
+      margin-bottom:15px;
+      background-color:#0d7963;
+    }
+
+    .content {
+      width:690px;
+      height:450px;
+      background-color:#494D5A;
+      float:right;
+    }
+
+    .sidebar {
+      width:275px;
+      height:450px;
+      background-color:#0d7963;
+      float:left;
+    }
+
+    .footer {
+      height:70px;
+      margin-top:15px;
+      background-color:#0d7963;
+    }
+
+    .clear {
+      clear:both;
+    }
+
+    .buttons {
+      text-align: center;
+    }
+
+    .primarytable{
+      border-collapse: separate;
+      border-spacing: 50px 25px;
+      background-color: #E5E5E5;
+      width: 100%;
+    }
+
+    #valor{
+    width: 50px;
+    }
+
+    textarea{
+    background-color: transparent;
+    color: white;
+    border: none;
+    }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+    <div class="header">
+      <img src="http://www.alabamanews.net/wp-content/uploads/2018/05/online-sports-betting.jpg" width="980px" height="250px" alt="">
+    </div><!-- .header -->
+
+    <div class="content">
+      <table class="primarytable" id="datatable">
+        <td> Liga Nos </td>
+
+        <td>
+
+        <table id="table1" border="1">
+
+            <tr>
+              <th>1</th>
+              <th>ODD</th>
+            </tr>
+
+            <tr>
+
+            </tr>
+
+        </table>
+
+        <table id="tablex" border="1">
+            <tr>
+                <th>X</th>
+                <th>ODD</th>
+            </tr>
+
+            <tr>
+
+            </tr>
+        </table>
+
+        <table id="table2" border="1">
+            <tr>
+                <th>2</th>
+                <th>ODD</th>
+            </tr>
+
+            <tr>
+
+            </tr>
+        </table>
+        </td>
+
+      </table>
+        <textarea name="" id="hist" cols="96" rows="14" style="display:none;"></textarea>
+    </div><!-- .content -->
+
+    <div class="sidebar">
+
+
+      <form class="" action="javascript:bet()" id="betform" method="post" style="display:none">
+        <fieldset>
+          <legend>Boletim de Apostas</legend>
+          Aposta: <input type="text" name="fname" id="escolha" readonly><br><br>
+          ODD: <input type="text" name="odd" id="odd" readonly oninput="calculate()" size="4"><br><br>
+          Valor a Apostar: <input min="0" step="1" type="number" name="valor" id="valor" oninput="calculate()"> €<br><br>
+          Ganhos: <input type="text" name="ganhos" id="ganhos" size="4" readonly > €  <br><br>
+          <div class="buttons">
+            <button type="submit" id="apostar">Apostar</button>
+            <button type="reset" >Limpar</button>
+          </div>
+        </fieldset>
+      </form>
+
+
+
+        <form class="" action="javascript:terminarApostas()" id="terminarApostasForm" method="post" >
+        <fieldset>
+          <legend>Terminar Apostas</legend>
+          <div class="buttons">
+            <button type="submit" id="terminar">Terminar Apostas</button>
+          </div>
+        </fieldset>
+      </form>
+
+
+        <form class="" action="javascript:inserirAposta()" id="inserirApostaForm" method="post" style="padding-top:20px;">
+            <fieldset>
+              <legend>Inserir Aposta</legend>
+                Equipa 1: <input name="equipa1" type="text" id="team1" required> <br>
+                vs <br>
+                Equipa 2: <input name="equipa2" type="text" id="team2" required> <br><br>
+
+              <div class="buttons">
+                  <button type="submit" id="inserir">Inserir</button>
+                  <button type="reset" >Limpar</button>
+              </div>
+
+            </fieldset>
+      </form>
+
+
+
+
+    </div><!-- .sidebar -->
+
+
+    <div class="clear">
+
+      <form class="" onload="javascript:user()" id="userdata" method="get">
+        <fieldset>
+          <legend>User</legend>
+          <h3 id="user" >User: </h3>
+          <h3 id="money">Money: </h3>
+          <h3 id="winning">Winning: </h3>
+
+        </fieldset>
+      </form>
+        <form>
+            <button  onclick="logout()">Logout</button>
+            <button onclick="historico()">Historico de Apostas</button>
+
+         </form>
+    </div><!-- .clear -->
+
+    </div><!-- .footer -->
+</div><!-- .wrap -->
+
+
+<script>
+function calculate() {
+  var teamODD = document.getElementById('odd').value;
+  var bet = document.getElementById('valor').value - (document.getElementById('valor').value * 0.3) ;
+  var result = document.getElementById('ganhos');
+  var myResult = teamODD * bet;
+  result.value = myResult;
+}
+</script>
+
+</body>
+</html>
